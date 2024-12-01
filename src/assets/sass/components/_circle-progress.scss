@@ -1,0 +1,61 @@
+.circle-wrapper {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  
+    .circle {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg); // Start from the top
+  
+      .background {
+        fill: none;
+        stroke: color(primary,grayLight); // Background border color
+        stroke-width: 4;
+      }
+  
+      .progress-gray,
+      .progress-new {
+        fill: none;
+        stroke-width: 4;
+        stroke-dasharray: 301.44; // Circumference of the circle (2 * π * r)
+        stroke-dashoffset: 301.44; // Initially hidden
+        stroke-linecap: round;
+        transition: stroke-dashoffset 0.8s ease-in-out, stroke 0.4s ease;
+      }
+  
+      .progress-gray {
+        stroke: color(regular,dark); // Gray color
+      }
+  
+      .progress-new {
+        stroke: color(primary,baseGreen); // New color
+      }
+    }
+  
+    &:hover {
+      .circle {
+        .progress-gray {
+          stroke-dashoffset: 0; // Reveal gray border
+        }
+  
+        .progress-new {
+          animation: newColorTransition 0.8s 0.8s ease-in-out forwards; // Delayed animation
+        }
+      }
+    }
+  }
+  
+  // New Color Transition Animation
+  @keyframes newColorTransition {
+    from {
+      stroke-dashoffset: 301.44; // Hidden
+    }
+    to {
+      stroke-dashoffset: 0; // Fully visible
+    }
+  }
+  

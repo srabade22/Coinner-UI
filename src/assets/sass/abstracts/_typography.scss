@@ -1,0 +1,84 @@
+/* ==========================================================================
+  Base Typography Styles
+  ========================================================================== */
+
+
+/* ==========================================================================
+   Base Type
+   ========================================================================== */
+   *{
+    &::-moz-focus-inner {
+      border: 0;
+    }
+    &:focus,&:active,&:hover{
+      &::-moz-focus-inner {
+        border: 0;
+      }
+      outline: 0;
+    }
+}
+
+html {
+  @include font-rem($htmlFontSize);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (min-width: 1500px){
+    @include font-rem(16px);
+  }
+
+  @media (min-width: 992px){
+    @include font-rem(14px);
+  }
+}
+
+body {
+  @include font-rem($htmlFontSize);
+  line-height: $baseLineHeight;
+  color: $baseTextColor;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (min-width: 1500px){
+    @include font-rem(16px);
+  }
+
+  @media (max-width: 1200px){
+    @include font-rem(14px);
+  }
+}
+
+body,
+input,
+select,
+textarea {
+  font-family: $baseFontFamily;
+}
+
+/* ==========================================================================
+   Headings and paragraph
+   ========================================================================== */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-style: normal;
+  text-transform: uppercase;
+  // @extend %baseSpacing;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+a{
+  color: color(primary,base);
+
+  &:hover{
+    color: color(primary,base);
+    text-decoration: underline;
+  }
+}

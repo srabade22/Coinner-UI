@@ -1,0 +1,56 @@
+:host {
+    position: relative;
+    display: block;
+}
+
+body {
+    cursor: none; // Hide the default cursor
+}
+
+#cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+
+    .cursor-border {
+        width: 35px;
+        height: 35px;
+        border: 2px solid #000;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        /* Adjusts position to center */
+        will-change: transform;
+        transition: transform 0.1s ease;
+    }
+
+    .cursor-dot {
+        width: 8px;
+        height: 8px;
+        background-color: #000;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        /* Adjusts position to center */
+        will-change: transform;
+        transition: transform 0.3s ease;
+    }
+}
+
+.cursor-border.hovered {
+    border-color: red; /* Change border color */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .cursor-dot.hovered {
+    background-color: green; /* Change dot color */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }

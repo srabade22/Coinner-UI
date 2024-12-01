@@ -1,0 +1,36 @@
+<aside class="aside coinner-aside hover-element">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 position-relative">
+                <div class="aside-widget aside-logo">
+                    <a href="#">
+                        <img src="assets/images/logo.png" alt="Logo">
+                    </a>
+                </div>
+
+                <div class="aside-widget aside-links">
+                    <ul class="aside-list">
+                        <li class="aside-list-item" *ngFor="let i of [].constructor(4)">
+                            <a href="#">
+                                <div class="icon">
+                                    <fa-icon [icon]="home"></fa-icon>
+                                </div>
+
+                                <div class="circle-wrapper">
+                                    <svg class="circle" viewBox="0 0 100 100">
+                                      <!-- Background Circle -->
+                                      <circle class="background" cx="50" cy="50" r="48"></circle>
+                                      <!-- First Transition Circle (Old color to gray) -->
+                                      <circle class="progress-gray" cx="50" cy="50" r="48"></circle>
+                                      <!-- Second Transition Circle (Gray to new color) -->
+                                      <circle class="progress-new" cx="50" cy="50" r="48"></circle>
+                                    </svg>
+                                </div>                                  
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>

@@ -1,0 +1,72 @@
+// Convert font-size from px to rem
+@mixin font-rem($font-size, $line-height: 0) {
+  font-size: calc($font-size / $baseFontSize) * 1rem !important;
+  
+  @if ($line-height > 0) {
+    line-height: calc($line-height / $baseFontSize) * 1rem !important;
+  }
+} 
+
+@mixin padding_rem($top, $right, $bottom, $left){
+  padding: ((calc($top / $baseFontSize)) * 1rem) ((calc($right / $baseFontSize)) * 1rem) ((calc($bottom / $baseFontSize)) * 1rem) ((calc($left / $baseFontSize)) * 1rem) ;
+}
+
+@mixin margin_rem($top, $right, $bottom, $left){
+  margin: ((calc($top / $baseFontSize)) * 1rem) ((calc($right / $baseFontSize)) * 1rem) ((calc($bottom / $baseFontSize)) * 1rem) ((calc($left / $baseFontSize)) * 1rem) ;
+}
+
+@mixin single_rem($rule, $size){
+  $rule: (calc($size / $baseFontSize)) * 1rem;
+}
+
+// Media query mixins
+@mixin bp($query) {
+    @if $query == desktop-lg {
+      @media (min-width: 1600px) { @content; }
+    }
+    @else if $query == desktop-md {
+      @media (max-width: 1450px) { @content; }
+    }
+    @else if $query == desktop-ms{
+      @media (min-width: 1201px) { @content; }
+    }
+    @else if $query == desktop-sm-strict {
+      @media (min-width: 1201px) and (max-width: 1450px)  { @content; }
+    }
+    @else if $query == desktop-sm {
+      @media (max-width: 1200px) { @content; }
+    }
+    @else if $query == tablet-md-strict {
+      @media (min-width: 992px) and (max-width: 1365px) { @content; }
+    }
+    @else if $query == tablet-md {
+      @media (min-width: 992px) { @content; }
+    }
+    @else if $query == tablet-sm {
+      @media (max-width: 991px) { @content; }
+    }
+    @else if $query == tablet-strict {
+      @media (min-width: 768px) and (max-width: 991px)  { @content; }
+    }
+    @else if $query == tablet {
+      @media (min-width: 768px) { @content; }
+    }
+    @else if $query == mobile {
+      @media (max-width: 767px)  { @content; }
+    }
+    @else if $query == s {
+      @media (max-width: 430px)  { @content; }
+    }
+    @else if $query == xs {
+      @media (max-width: 320px)  { @content; }
+    }
+}
+
+@mixin px-rem($font-size, $type){
+  @if $type == width {
+    width: ($font-size / $baseFontSize) * 1rem;
+  }
+  @if $type == height {
+    height: ($font-size / $baseFontSize) * 1rem;
+  }
+}

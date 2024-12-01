@@ -1,0 +1,31 @@
+/************
+* VARIABLES
+************/
+
+// Colour Variables
+$colors: (
+    primary: (
+        base: #322e6b,
+        baseGreen: #45f882,
+        bgDark: #0c0f14,
+        bgDarkLight: #1c242f,
+        gray: #39424c,
+        grayLight: #505d6a
+    ),
+    regular: (
+        light: #ffffff,
+        dark: #000000
+    )
+);
+
+$htmlFontSize: 16px;
+$baseFontSize: 16px;
+
+$baseFontFamily: "Khula", serif;
+$baseHeadingFont: "Khula", serif;
+$subHeadingFont: "Khula", serif;
+$baseLineHeight: 1.5;
+$baseTextColor: #1d2329;
+
+
+$khula: "Khula", serif;
