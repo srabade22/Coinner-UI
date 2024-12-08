@@ -1,0 +1,125 @@
+<ng-scrollbar class="register-scrollable-content" [visibility]="'hover'" [appearance]="'compact'">
+    <div class="container-fluid pt-120 pb-120">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="register">
+                    <div class="register-wrap">
+
+                        <div class="register-header text-center">
+                            <h2 class="register-heading" data-text="Hello Player">
+                                Hello Player
+                            </h2>
+
+                            <p class="register-description mb-0">
+                                Getting Started Is Easy.
+                            </p>
+                        </div>
+
+                        <div class="register-content">
+
+                            <!-- Register using third party auth -->
+                            <ng-container *ngIf="!isEmailRegister">
+                                <div class="register-with">
+                                    <div class="btn-container">
+                                        <div class="btn btn-gray lg">
+                                            <span class="icon">
+                                                <img src="../../../assets/images/socials/google.svg" onerror="this.src='../../../assets/images/socials/google.png'" alt="Register with google">
+                                            </span>
+                                            <span class="text">Google</span>
+                                        </div>
+
+                                        <div class="btn btn-gray lg">
+                                            <span class="icon">
+                                                <img src="../../../assets/images/socials/facebook.svg" onerror="this.src='../../../assets/images/socials/facebook.png'" alt="Register with facebook">
+                                            </span>
+                                            <span class="text">Facebook</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="divider">
+                                    <span class="text">Or</span>
+                                </div>  
+
+                                <div class="btn-container">
+                                    <div class="btn btn-secondary xl no-border w-100">
+                                        <span class="icon">
+                                            <img src="../../../assets/images/icons/wallet.svg" onerror="this.src='../../../assets/images/icons/wallet.png'" alt="register with wallet">
+                                        </span>
+                                        <span class="text">Register With Wallet</span>
+                                    </div>
+                                </div>
+
+                                <div class="btn-container justify-content-center mt-3">
+                                    <div class="btn btn-dark no-border lg" (click)="onEmailRegister()">
+                                        <span class="text">Continue With Email</span>
+
+                                        <span class="icon ms-2 me-0">
+                                            <img src="../../../assets/images/icons/arrow-right.svg" onerror="this.src='../../../assets/images/icons/arrow-right.png'" alt="Register with email" class="green">
+                                        </span>
+                                    </div>
+                                </div>
+                            </ng-container>
+
+                            <!-- Register with email -->
+                             <ng-container *ngIf="isEmailRegister">
+
+                                <form class="form">
+                                    <div class="input-field">
+                                        <div class="input-box">
+                                            <input type="email" placeholder="Enter Email" required>
+                                            <div class="icon">
+                                                <img src="../../../assets/images/icons/email.svg" onerror="this.src='../../../assets/images/icons/email.png'" alt="Email">
+                                            </div>
+                                        </div>
+                                        <div class="error d-none">Enter your email here</div>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <div class="input-box">
+                                            <input type="password" placeholder="Enter Password" required>
+                                            <div class="icon">
+                                                <img src="../../../assets/images/icons/key.svg" onerror="this.src='../../../assets/images/icons/key.png'" alt="Email">
+                                            </div>
+                                            <div class="icon view-pass" (click)="onViewPassword()">
+                                                <img class="eye" src="../../../assets/images/icons/eye.svg" onerror="this.src='../../../assets/images/icons/eye.png'" alt="View Password" *ngIf="!isPasswordVisible">
+                                                <img class="eye-hidden" src="../../../assets/images/icons/eye-hidden.svg" onerror="this.src='../../../assets/images/icons/eye-hidden.png'" alt="Hide Password" *ngIf="isPasswordVisible">
+                                            </div>
+                                        </div>
+                                        <div class="error d-none">Enter your password here</div>
+                                    </div>
+
+                                    <div class="btn-container">
+                                        <div class="btn btn-secondary xl no-border w-100">
+                                            <span class="text">Register</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-container justify-content-center mt-3">
+                                        <div class="btn btn-dark no-border lg" (click)="onEmailRegister()">
+                                            <span class="icon me-2 ms-0">
+                                                <img src="../../../assets/images/icons/arrow-left.svg" onerror="this.src='../../../assets/images/icons/arrow-left.png'" alt="Register with email" class="green">
+                                            </span>
+
+                                            <span class="text">Go back</span>
+                                        </div>
+                                    </div>
+                                </form>
+
+                             </ng-container>
+
+                            <div class="links">
+                                <div class="link">
+                                    Already have an account? <a href="/auth/login">Sign In!</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</ng-scrollbar>

@@ -1,0 +1,158 @@
+.btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .btn{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        min-width: max-content;
+        height: 64px;
+
+        background: color(primary,grayDark);
+        border: 1px solid color(regular,lightOp);
+        box-sizing: border-box;
+        
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 90% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 90% 100%, 0% 100%);
+
+        transition: all .2s;
+        overflow: hidden;
+
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: -12px;
+            right: 16px;
+            width: 1px;
+            height: 40px;
+            z-index: 1;
+            transform: rotate(55deg);
+            background: color(regular,lightOp);
+            -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 90% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 90% 100%, 0% 100%);
+        }
+
+        .icon{
+            position: relative;
+            line-height: 0;
+            margin-right: 10px;
+            z-index: 2;
+
+            img{
+                display: block;
+                width: 24px;
+                height: auto;
+                line-height: 1;
+            }
+
+            .light{
+                filter: $lightFilter;
+            }
+
+            .green{
+                filter: $greenFilter;
+            }
+        }
+
+        .text{
+            position: relative;
+            @include font-rem(16px, 16px);
+            color: color(regular,lightOp4);
+            font-weight: 700;
+            transition: all .2s;
+            z-index: 2;
+        }
+
+        &:hover{
+            border: 0;
+
+            &::before{
+                background: transparent;
+            }
+
+            .text{
+                color: color(regular,light);
+            }
+        }
+
+        &.lg{
+            min-width: 288px;
+        }
+
+        &.xl{
+            min-width: 100%;
+
+            .text{
+                @include font-rem(18px, 24px);
+                font-weight: 700;
+            }
+        }
+
+        &-secondary{
+            background: color(secondary, base);
+
+            .text{
+                color: color(primary,bgDark);
+                z-index: 2;
+            }
+
+            &::after{
+                display: block !important;
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 800%;
+                width: 140%;
+                background: color(tertiary,base);
+                z-index: 1;
+                -webkit-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out;
+                -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+                transform: translateX(-98%) translateY(-25%) rotate(45deg);
+            }
+
+            &:hover{
+                .text{
+                    color: color(primary,bgDark);
+                }
+
+                &::after{
+                    -webkit-transform: translateX(-6%) translateY(-25%) rotate(45deg);
+                    transform: translateX(-6%) translateY(-25%) rotate(45deg);
+                }
+            }
+        }
+
+        &-dark{
+            background: color(regular, dark);
+
+            .text{
+                color: color(secondary,base);
+            }
+
+            &:hover{
+                background: color(primary, grayDark);
+
+                .text{
+                    color: color(secondary,base);
+                }
+            }
+        }
+
+        &.no-border{
+            border: 0;
+            -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 94% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 94% 100%, 0% 100%);
+
+            &::before{
+                display: none;
+            }
+        }
+    }
+}

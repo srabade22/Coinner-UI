@@ -22,14 +22,6 @@ html {
   @include font-rem($htmlFontSize);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media (min-width: 1500px){
-    @include font-rem(16px);
-  }
-
-  @media (min-width: 992px){
-    @include font-rem(14px);
-  }
 }
 
 body {

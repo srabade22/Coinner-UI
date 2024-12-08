@@ -1,0 +1,35 @@
+
+
+<div class="auth">
+    <div class="auth-wrap">
+        <div class="bg-image">
+            <ng-scrollbar class="bg-image-scrollable-content" [visibility]="'hover'" [appearance]="'compact'">
+                <img src="../../assets/images/fight.png" alt="">
+            </ng-scrollbar>
+        </div>
+
+        <div class="coinner-layout">
+            <header class="header coinner-header">
+                <div class="header-wrap d-flex flex-wrap">
+                    <div class="container-fluid">
+                        <div class="row h-100">
+                            <div class="col-12 d-flex">
+            
+                                <div class="header-logo">
+                                    <a href="#">
+                                        <img src="assets/images/logo.png" alt="Logo">
+                                    </a>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="main">
+                <router-outlet/>
+            </main>
+        </div>
+    </div>
+</div>

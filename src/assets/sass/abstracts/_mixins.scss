@@ -70,3 +70,23 @@
     height: ($font-size / $baseFontSize) * 1rem;
   }
 }
+
+@mixin padding($direction, $value) {
+  @if $direction == 'all' {
+    padding: $value;
+  } @else if $direction == 'top' {
+    padding-top: $value;
+  } @else if $direction == 'right' {
+    padding-right: $value;
+  } @else if $direction == 'bottom' {
+    padding-bottom: $value;
+  } @else if $direction == 'left' {
+    padding-left: $value;
+  } @else if $direction == 'x' {
+    padding-left: $value;
+    padding-right: $value;
+  } @else if $direction == 'y' {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+}

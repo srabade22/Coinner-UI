@@ -1,0 +1,53 @@
+.form{
+    .input-field{
+        margin-bottom: 30px;
+
+        &:nth-last-child(1){
+            margin-bottom: 0;
+        }
+
+        .input-box{
+            position: relative;
+
+            input{
+                font-weight: 500;
+                color: color(lightOp, op7);
+
+                display: flex;
+                align-items: center;
+
+                width: 100%;
+                height: 64px;
+                background: color(primary,grayDark);
+                border: 1px solid color(regular,lightOp);
+                padding: 0 12px 0 60px;
+
+                &::placeholder{
+                    font-weight: 500;
+                    color: color(lightOp, op7);
+                }
+            }
+
+            .icon{
+                position: absolute;
+                top: 50%;
+                left: 20px;
+                transform: translateY(-50%);
+
+                img{
+                    width: 24px;
+                    height: auto;
+                    filter: $greenFilter;
+                }
+
+
+                &.view-pass{
+                    left: auto;
+                    right: 20px;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+}

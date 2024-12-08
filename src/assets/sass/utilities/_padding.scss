@@ -1,0 +1,20 @@
+// Utility classes
+.p-120 {
+    @include padding(all, 120px);
+}
+
+.pt-120 {
+    @include padding(top, 120px);
+}
+
+.pr-120 {
+    @include padding(right, 120px);
+}
+
+.pb-120 {
+    @include padding(bottom, 120px);
+}
+
+.pl-120 {
+    @include padding(left, 120px);
+}

@@ -1,0 +1,59 @@
+@import "../../../../assets/sass/app";
+
+
+.header{
+    width: 100%;
+    height: 100px;
+    
+    position: fixed;
+    top: 0;
+    left: 97px;
+    z-index: 99;
+
+    background-color: color(regular, dark);
+    border-bottom: 1px solid color(primary,gray);
+    
+    &-wrap{
+        width: 100%;
+        height: 100%;
+    }
+
+    &-logo{
+        display: none;
+    }
+
+    &-navbar{
+        .menu{
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+            &-item{
+                a{
+                    display: block;
+                    @include font-rem(15px, 18px);
+                    font-weight: 600;
+                    color: color(regular, light);
+                    text-transform: uppercase;
+                    padding: 37px 12px;
+                    text-decoration: none;
+                    transition: .1s;
+
+                    &:hover{
+                        color: color(secondary, base);
+                    }
+
+                    &.active{
+                        color: color(secondary, base);
+                    }
+                }
+
+                .submenu{
+                    display: none;
+                }
+            }
+        }
+    }
+}

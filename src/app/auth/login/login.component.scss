@@ -1,0 +1,60 @@
+@import "../../../assets/sass/app";
+
+.login{
+    &-wrap{
+        max-width: 850px;
+        margin: 0 auto;
+        border: 1px solid color(primary,gray);
+        border-radius: 30px;
+        @include padding(x, 40px);
+        @include padding(y, 120px);
+
+
+        .login-header{
+            margin-bottom: 55px;
+
+            .login-heading{
+                position: relative;
+                color: color(regular, light);
+
+                &::after{
+                    content: attr(data-text);
+                    position: absolute;
+                    width: 100%;
+                    top: -5px;
+                    left: -5px;
+                    z-index: -1;
+                    color: color(primary,gray);
+                    -webkit-text-stroke: 1px color(secondary,base);
+                    opacity: .5;
+                }
+            }
+
+            .login-description{
+                @include font-rem(20px, 24px);
+                color: color(lightOp, op7);
+                margin-top: 12px;
+            }
+        }
+
+        .login-content{
+            max-width: 600px;
+            margin: 0 auto;
+
+            .login-with{
+                .btn-container{
+                    justify-content: center;
+                    gap: 20px;
+                }
+            }
+
+            .links{
+                margin-top: 55px;
+                
+                .link{
+                    color: color(lightOp, op7);
+                }
+            }
+        }
+    }
+}

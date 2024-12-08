@@ -4,7 +4,8 @@ import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: 'app-cursor',
   templateUrl: './cursor.component.html',
-  styleUrls: ['./cursor.component.scss']
+  styleUrls: ['./cursor.component.scss'],
+  standalone: false
 })
 export class CursorComponent implements OnInit, OnDestroy {
   private borderElement: HTMLElement | null = null;

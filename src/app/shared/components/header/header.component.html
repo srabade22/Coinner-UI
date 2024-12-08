@@ -1,3 +1,55 @@
 <header class="header coinner-header">
-    Header Works!
+    <div class="header-wrap d-flex flex-wrap">
+        <div class="container-fluid">
+            <div class="row h-100">
+                <div class="col-12 d-flex">
+
+                    <div class="header-logo">
+                        <a href="#">
+                            <img src="assets/images/logo.png" alt="Logo">
+                        </a>
+                    </div>
+            
+                    <nav class="header-navbar d-flex align-items-center justify-content-center">
+                        <ul class="menu mb-0">
+                            <li class="menu-item">
+                                <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+                              </li>
+                              
+                            <li class="menu-item">
+                                <a routerLink="/games" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Games</a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a routerLink="/shop" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Shop</a>
+            
+                                <ul class="submenu">
+                                    <li class="submenu-item">
+                                        <a href="">Coinner Coins</a>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="">Market</a>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="">Gifts</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="menu-item">
+                                <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">About Us</a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Contact Us</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
 </header>

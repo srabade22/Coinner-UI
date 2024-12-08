@@ -5,6 +5,10 @@ import { RouterModule, Routes } from '@angular/router';
 // Components
 import { WebsiteComponent } from './website.component';
 import { HomeComponent } from './home/home.component';
+import { GamesComponent } from './games/games.component';
+import { ShopComponent } from './shop/shop.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {
@@ -13,6 +17,10 @@ const routes: Routes = [
     children: [
         { path: '', redirectTo: 'home', pathMatch: 'full' },
         { path: 'home', component: HomeComponent },
+        { path: 'games', component: GamesComponent },
+        { path: 'shop', component: ShopComponent },
+        { path: 'about', component: AboutComponent },
+        { path: 'contact', component: ContactComponent },
     ],
   },
 ];

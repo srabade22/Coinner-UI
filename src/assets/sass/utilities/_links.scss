@@ -1,0 +1,10 @@
+a{
+    color: color(secondary,base);
+    text-decoration: none;
+    transition: all .2s;
+
+    &:hover{
+        color: color(secondary,base);
+        text-decoration: none;
+    }
+}

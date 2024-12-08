@@ -10,22 +10,47 @@ $colors: (
         bgDark: #0c0f14,
         bgDarkLight: #1c242f,
         gray: #39424c,
+        grayDark: #141a23,
         grayLight: #505d6a
+    ),
+    secondary: (
+        base: #45f882,
+    ),
+    tertiary: (
+        base: #faab07
     ),
     regular: (
         light: #ffffff,
+        lightOp: rgba(255,255,255,.1),
+        lightOp4: rgba(255,255,255,.4),
         dark: #000000
+    ),
+    lightOp: (
+        op1: rgba(255,255,255,.1),
+        op2: rgba(255,255,255,.2),
+        op3: rgba(255,255,255,.3),
+        op4: rgba(255,255,255,.4),
+        op5: rgba(255,255,255,.5),
+        op6: rgba(255,255,255,.6),
+        op7: rgba(255,255,255,.7),
+        op8: rgba(255,255,255,.8),
+        op9: rgba(255,255,255,.9),
     )
 );
 
 $htmlFontSize: 16px;
 $baseFontSize: 16px;
 
-$baseFontFamily: "Khula", serif;
-$baseHeadingFont: "Khula", serif;
-$subHeadingFont: "Khula", serif;
+$baseFontFamily: "Khula", sans-serif;
+$baseHeadingFont: "Khula", sans-serif;
+$subHeadingFont: "Khula", sans-serif;
 $baseLineHeight: 1.5;
 $baseTextColor: #1d2329;
 
 
-$khula: "Khula", serif;
+$khula: "Khula", sans-serif;
+
+
+
+$lightFilter: invert(100%) sepia(4%) saturate(17%) hue-rotate(30deg) brightness(107%) contrast(102%);
+$greenFilter: invert(99%) sepia(72%) saturate(1762%) hue-rotate(62deg) brightness(99%) contrast(96%);
